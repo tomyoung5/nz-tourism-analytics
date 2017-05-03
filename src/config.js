@@ -1,0 +1,1 @@
+export let baseUrl = "http://csvue-v4-backend.dev";
