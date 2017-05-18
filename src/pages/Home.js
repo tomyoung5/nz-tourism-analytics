@@ -7,9 +7,16 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton'
 import Checkbox from 'material-ui/Checkbox';
+import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 
 //Rechart stuff
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, BarChart, Area, AreaChart, Pie, PieChart } from 'recharts';
+
+import { queenstownData } from '../data/queenstown-accomodation.js';
+
+import QueenstownLineGraph from '../components/Queenstown/QueenstownLineGraph.js';
+import QueenstownAreaGraph from '../components/Queenstown/QueenstownAreaGraph.js';
+
 
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -28,15 +35,57 @@ const data01 = [{name: 'Group A', value: 400}, {name: 'Group B', value: 300},
 export default class Home extends React.Component {
 
     state = {
-        value: 1,
+        //value: 1,
+        radioValue: 'area'
     };
 
-    handleChange = (event, index, value) => this.setState({value});
+    // handleChange = (event, index, value) => this.setState({value});
+
+    radioButtonChange = (event, value) => {
+        this.setState({
+            radioValue: value
+        })
+    }
+
+    renderGraph = () => {
+        if(this.state.radioValue == 'area'){
+            return <QueenstownAreaGraph />
+        }
+        if(this.state.radioValue == 'line'){
+            return <QueenstownLineGraph />
+        }
+    }
 
     render() {
         return (
             <div style={{backgroundColor: "#303030", padding: 20}}>
                 
+                <Paper
+                    zDepth={1}
+                    style={{padding: 20, paddingLeft: 50, margin: 30}}
+                    >
+                    <div>
+                        <h1>Queenstown Accomodation Types</h1>
+
+                        <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.radioButtonChange} style={{marginBottom: 30}}>
+                            <RadioButton
+                                value="area"
+                                label="Area Graph"
+                                style={{marginBottom: 10}}
+                            />
+                            <RadioButton
+                                value="line"
+                                label="Line Graph"
+                            />
+                        </RadioButtonGroup>
+
+                        {this.renderGraph()}
+
+                        
+                    </div>
+                </Paper>
+
+
                 <Paper
                     zDepth={1}
                     style={{padding: 20, margin: 30}}
@@ -88,6 +137,7 @@ export default class Home extends React.Component {
                         Donec porta aliquet fermentum. Sed ac mollis sem. Duis quis massa pellentesque, scelerisque diam at, pellentesque massa. Suspendisse fringilla justo sit amet leo finibus, ut accumsan nisl ultrices. Proin eu pellentesque orci. Nunc in risus lacus. Praesent rhoncus neque tincidunt dolor eleifend, in condimentum massa vestibulum. Curabitur euismod turpis quis nisi imperdiet pellentesque. Cras varius tempus massa, ut tristique orci finibus a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor arcu et efficitur aliquam.
                     </div>
                 </Paper>
+         
 
 
                 <Paper
