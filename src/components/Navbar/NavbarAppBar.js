@@ -10,7 +10,7 @@ const NavbarAppBar = ({toggleLeftMenu}) => (
     <AppBar
         title={
                 <div>
-                    <span>NZ Tourism Analytics</span>
+                    <span>New Zealand Tourism Analytics</span>
                     <TimeLine className="timeline"/>
                 </div>
                 }

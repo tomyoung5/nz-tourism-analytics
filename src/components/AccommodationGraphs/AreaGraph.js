@@ -2,16 +2,12 @@ import React from 'react';
 
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ReferenceLine } from 'recharts';
 
-import { queenstownData } from '../../data/queenstown-accomodation.js';
 
-
-
-
-class QueenstownAreaGraph extends React.Component{
+class AreaGraph extends React.Component{
 
     render() {
         return (
-            <AreaChart width={1000} height={600} data={queenstownData}
+            <AreaChart width={1000} height={600} data={this.props.data}
                 margin={{top: 20, right: 30, left: 0, bottom: 0}}>
                 <XAxis dataKey="year"/>
                 <YAxis width={70}/>
@@ -31,4 +27,4 @@ class QueenstownAreaGraph extends React.Component{
     }
 }
 
-export default QueenstownAreaGraph;
+export default AreaGraph;

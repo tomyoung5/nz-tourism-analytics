@@ -2,14 +2,12 @@ import React from 'react';
 
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ReferenceLine } from 'recharts';
 
-import { queenstownData } from '../../data/queenstown-accomodation.js';
 
-
-class QueenstownLineGraph extends React.Component{
+class LineGraph extends React.Component{
 
     render() {
         return (
-            <LineChart  width={1000} height={600} data={queenstownData}
+            <LineChart  width={1000} height={600} data={this.props.data}
                 margin={{top: 20, right: 30, left: 0, bottom: 0}}>
                 <XAxis dataKey="year"/>
                 <YAxis width={70}/>
@@ -30,4 +28,4 @@ class QueenstownLineGraph extends React.Component{
     }
 }
 
-export default QueenstownLineGraph;
+export default LineGraph;
