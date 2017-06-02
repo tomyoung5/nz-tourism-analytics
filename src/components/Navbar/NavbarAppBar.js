@@ -1,13 +1,14 @@
 import React from "react";
-import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import TimeLine from 'material-ui/svg-icons/action/timeline';
+
+import { ResponsiveAppBar } from 'material-ui-responsive-drawer'
 
 import styles from './NavbarAppBar.scss';
 
 const NavbarAppBar = ({toggleLeftMenu}) => (
     
-    <AppBar
+    <ResponsiveAppBar
         title={
                 <div>
                     <span>New Zealand Tourism Analytics</span>

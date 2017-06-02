@@ -28,7 +28,7 @@ ReactDOM.render(
             <Router history={browserHistory} routes={routes} />
         </MuiThemeProvider>
     </Provider>
-, app);
+, app)
 
 /*
 const muiTheme = getMuiTheme({

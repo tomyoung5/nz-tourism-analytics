@@ -2,13 +2,12 @@ import React from "react";
 
 //Material UI
 import Paper from 'material-ui/Paper';
-import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 
 //Custom Components
 import LineGraph from '../components/AccommodationGraphs/LineGraph.js';
 import AreaGraph from '../components/AccommodationGraphs/AreaGraph.js';
 
-import styles from './styles.scss';
 
 import { queenstownData } from '../data/accommodation/queenstown.js';
 
@@ -16,7 +15,7 @@ export default class Queenstown extends React.Component {
 
     state = {
         radioValue: 'area'
-    };
+    }
 
     radioButtonChange = (event, value) => {
         this.setState({
@@ -25,10 +24,10 @@ export default class Queenstown extends React.Component {
     }
 
     renderGraph = () => {
-        if(this.state.radioValue == 'area'){
+        if (!this.state.radioValue == 'area') {
             return <AreaGraph data={queenstownData} />
         }
-        if(this.state.radioValue == 'line'){
+        if (this.state.radioValue == 'line') {
             return <LineGraph data={queenstownData}/>
         }
     }
@@ -38,7 +37,6 @@ export default class Queenstown extends React.Component {
             <div className="page">
                 
                 <Paper
-                    zDepth={1}
                     style={{padding: 20, paddingLeft: 50, margin: 30}}
                     >
                     <div>

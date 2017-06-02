@@ -3,8 +3,6 @@ import React from "react";
 //Material UI
 import Paper from 'material-ui/Paper';
 
-import styles from './styles.scss';
-
 export default class Home extends React.Component {
 
     render() {

@@ -8,8 +8,6 @@ import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import LineGraph from '../components/AccommodationGraphs/LineGraph.js';
 import AreaGraph from '../components/AccommodationGraphs/AreaGraph.js';
 
-import styles from './styles.scss';
-
 import { aucklandData } from '../data/accommodation/auckland.js';
 
 export default class Auckland extends React.Component {
@@ -39,8 +37,7 @@ export default class Auckland extends React.Component {
             <div className="page">
                 
                 <Paper
-                    zDepth={1}
-                    style={{padding: 20, paddingLeft: 50, margin: 30}}
+                    style={{paddingLeft: 10, margin: 30, marginTop: 80}}
                     >
                     <div>
                         <h1>Auckland</h1>

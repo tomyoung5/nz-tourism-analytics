@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
-    "material-ui": "^0.17.0",
+    "material-ui": "^0.18.1",
+    "material-ui-responsive-drawer": "^1.1.22",
     "normalize.css": "^5.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -41,6 +42,7 @@
     "recharts": "^0.22.4",
     "redux": "^3.6.0",
     "redux-form": "^6.5.0",
+    "redux-responsive": "^4.3.2",
     "redux-thunk": "^2.2.0"
   }
 }

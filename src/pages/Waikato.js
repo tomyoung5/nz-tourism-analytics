@@ -8,8 +8,6 @@ import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import LineGraph from '../components/AccommodationGraphs/LineGraph.js';
 import AreaGraph from '../components/AccommodationGraphs/AreaGraph.js';
 
-import styles from './styles.scss';
-
 import { waikatoData } from '../data/accommodation/waikato.js';
 
 export default class Waikato extends React.Component {
@@ -39,7 +37,6 @@ export default class Waikato extends React.Component {
             <div className="page">
                 
                 <Paper
-                    zDepth={1}
                     style={{padding: 20, paddingLeft: 50, margin: 30}}
                     >
                     <div>
