@@ -6,7 +6,7 @@ import { Area, AreaChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Referenc
 
 class AreaGraphClass extends React.Component{
 
-    setGraphHeight = () =>{
+    setGraphHeight = () =>{        
         const { screenSize } = this.props
 
         if(screenSize.extraSmall){
@@ -25,7 +25,7 @@ class AreaGraphClass extends React.Component{
 
     render() {
         return (
-            <ResponsiveContainer width="100%" height={this.setGraphHeight()}>
+            <ResponsiveContainer width="100%" height={this.setGraphHeight()}>                
                 <AreaChart data={this.props.data}
                     margin={{top: 20, right: 30, left: 0, bottom: 0}}>
                     <XAxis dataKey="year"/>

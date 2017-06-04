@@ -175,11 +175,11 @@ const total = [
     747370
 ]
 
-export const waikatoData = []
+export const waikatoAccomodationData = []
 
 function buildData(){    
     for(let count = 0; count < camping.length; count++){
-        waikatoData.push(
+        waikatoAccomodationData.push(
             {
                 year: ('' + (2000 + count)),
                 camping: camping[count],

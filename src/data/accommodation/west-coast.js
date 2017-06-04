@@ -175,11 +175,11 @@ const total = [
     539651
 ]
 
-export const westCoastData = []
+export const westCoastAccomodationData = []
 
 function buildData(){    
     for(let count = 0; count < camping.length; count++){
-        westCoastData.push(
+        westCoastAccomodationData.push(
             {
                 year: ('' + (2000 + count)),
                 camping: camping[count],

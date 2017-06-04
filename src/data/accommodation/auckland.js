@@ -175,11 +175,11 @@ const total = [
     1977351,
 ]
 
-export const aucklandData = []
+export const aucklandAccomodationData = []
 
 function buildData(){    
     for(let count = 0; count < camping.length; count++){
-        aucklandData.push(
+        aucklandAccomodationData.push(
             {
                 year: ('' + (2000 + count)),
                 camping: camping[count],

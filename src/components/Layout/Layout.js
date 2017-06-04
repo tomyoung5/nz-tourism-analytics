@@ -10,8 +10,7 @@ const Layout = ({
     <div>
         <NavbarContainer />
 
-
-        <BodyContainer>            
+        <BodyContainer style={{marginTop: 64}}>            
             <LeftMenuContainer />
             {children}
         </BodyContainer>

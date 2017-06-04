@@ -175,11 +175,11 @@ const total = [
     761278
 ]
 
-export const wellingtonData = []
+export const wellingtonAccomodationData = []
 
 function buildData(){    
     for(let count = 0; count < camping.length; count++){
-        wellingtonData.push(
+        wellingtonAccomodationData.push(
             {
                 year: ('' + (2000 + count)),
                 camping: camping[count],

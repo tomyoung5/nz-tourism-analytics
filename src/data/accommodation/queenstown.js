@@ -175,11 +175,11 @@ const total = [
     1454615
 ]
 
-export const queenstownData = []
+export const queenstownAccomodationData = []
 
 function buildData(){    
     for(let count = 0; count < camping.length; count++){
-        queenstownData.push(
+        queenstownAccomodationData.push(
             {
                 year: ('' + (2000 + count)),
                 camping: camping[count],

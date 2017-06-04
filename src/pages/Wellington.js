@@ -3,12 +3,14 @@ import React from "react";
 //Material UI
 import Paper from 'material-ui/Paper';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import {Tabs, Tab} from 'material-ui/Tabs';
 
 //Custom Components
 import LineGraph from '../components/AccommodationGraphs/LineGraph.js';
 import AreaGraph from '../components/AccommodationGraphs/AreaGraph.js';
 
-import { wellingtonData } from '../data/accommodation/wellington.js';
+import { wellingtonAccomodationData } from '../data/accommodation/wellington.js';
+import { wellingtonCountryData } from '../data/country/wellington.js';
 
 export default class Wellington extends React.Component {
 
@@ -25,39 +27,46 @@ export default class Wellington extends React.Component {
 
     renderGraph = () => {
         if(this.state.radioValue == 'area'){
-            return <AreaGraph data={wellingtonData} />
+            return <AreaGraph data={wellingtonAccomodationData} />
         }
         if(this.state.radioValue == 'line'){
-            return <LineGraph data={wellingtonData}/>
+            return <LineGraph data={wellingtonAccomodationData}/>
         }
     }
 
     render() {
         return (
             <div className="page">
+                <Tabs>
+                    <Tab label="Accomodation">
+                        <Paper
+                            style={{padding: 20, paddingLeft: 50, margin: 30}}
+                            >
+                            <div>
+                                <h1>Wellington</h1>
+
+                                <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.radioButtonChange} style={{marginBottom: 30}}>
+                                    <RadioButton
+                                        value="area"
+                                        label="Area Graph"
+                                        style={{marginBottom: 10}}
+                                    />
+                                    <RadioButton
+                                        value="line"
+                                        label="Line Graph"
+                                    />
+                                </RadioButtonGroup>
+
+                                {this.renderGraph()}
+                                
+                            </div>
+                        </Paper>
+                    </Tab>
+
+                    <Tab label="Country">
+                    </Tab>                    
+                </Tabs>
                 
-                <Paper
-                    style={{padding: 20, paddingLeft: 50, margin: 30}}
-                    >
-                    <div>
-                        <h1>Wellington</h1>
-
-                        <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.radioButtonChange} style={{marginBottom: 30}}>
-                            <RadioButton
-                                value="area"
-                                label="Area Graph"
-                                style={{marginBottom: 10}}
-                            />
-                            <RadioButton
-                                value="line"
-                                label="Line Graph"
-                            />
-                        </RadioButtonGroup>
-
-                        {this.renderGraph()}
-                        
-                    </div>
-                </Paper>
             </div>
         );
     }
