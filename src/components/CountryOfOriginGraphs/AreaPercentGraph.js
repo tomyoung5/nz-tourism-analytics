@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ReferenceLine, ResponsiveContainer } from 'recharts';
 
 
-class AreaGraphClass extends React.Component{
+class AreaPercentGraphClass extends React.Component{
 
     setGraphHeight = () =>{
         const { screenSize } = this.props
@@ -50,8 +50,8 @@ const mapStateToProps = (state) => {
     }
 };
 
-const AreaGraph = connect(
+const AreaPercentGraph = connect(
     mapStateToProps
-)(AreaGraphClass);
+)(AreaPercentGraphClass);
 
-export default AreaGraph;
+export default AreaPercentGraph;
