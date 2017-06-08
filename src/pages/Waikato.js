@@ -18,7 +18,7 @@ export default class Waikato extends React.Component {
 
     state = {
         accommodationRadioValue: 'area',
-        countryRadioValue: 'areaStacked'
+        countryRadioValue: 'areaPercent'
     };
 
 
@@ -61,7 +61,7 @@ export default class Waikato extends React.Component {
                             style={{padding: 10, paddingLeft: 30}}
                             >
                             <div>
-                                <h1>Waikato</h1>
+                                <h1>Waikato - Accommodation Type</h1>
                                 <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.accommodationRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="area"
@@ -83,8 +83,8 @@ export default class Waikato extends React.Component {
                             style={{padding: 10, paddingLeft: 30}}
                             >
                             <div>
-                                <h1>Country of Origin Of Visitors</h1>       
-                                <RadioButtonGroup name="GraphType" defaultSelected="areaStacked" onChange={this.countryRadioButtonChange} style={{marginBottom: 30}}>
+                                <h1>Waikato  - Origin Of Visitors</h1>       
+                                <RadioButtonGroup name="GraphType" defaultSelected="areaPercent" onChange={this.countryRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="areaPercent"
                                         label="Percent Area Graph"

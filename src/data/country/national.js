@@ -98,6 +98,7 @@ function buildData(){
                 china: china[count],
                 usa: usa[count],
                 uk: uk[count],
+                total: (australia[count] + china[count] + usa[count] + uk[count]),
             })
     }
 }

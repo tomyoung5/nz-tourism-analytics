@@ -2,6 +2,8 @@ import React from "react";
 import NavbarContainer from "../Navbar/NavbarContainer.js";
 import LeftMenuContainer from "../LeftMenu/LeftMenuContainer.js";
 
+import fonts from '../../fonts/fonts.css';
+
 import { BodyContainer } from 'material-ui-responsive-drawer'
 
 const Layout = ({

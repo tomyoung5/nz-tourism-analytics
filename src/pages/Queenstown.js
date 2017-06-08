@@ -63,7 +63,7 @@ export default class Queenstown extends React.Component {
                             style={{padding: 10, paddingLeft: 30}}
                             >
                             <div>
-                                <h1>Queenstown Accomodation Types</h1>
+                                <h1>Queenstown - Accommodation Type</h1>
                                 <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.accommodationRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="area"
@@ -86,7 +86,7 @@ export default class Queenstown extends React.Component {
                             style={{padding: 10, paddingLeft: 30}}
                             >
                             <div>
-                                <h1>Country of Origin Of Visitors</h1>       
+                                <h1>Queenstown - Origin Of Visitors</h1>       
                                 <RadioButtonGroup name="GraphType" defaultSelected="areaStacked" onChange={this.countryRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="areaPercent"

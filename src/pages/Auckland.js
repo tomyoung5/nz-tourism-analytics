@@ -19,7 +19,7 @@ export default class Auckland extends React.Component {
 
      state = {
         accommodationRadioValue: 'area',
-        countryRadioValue: 'areaStacked'
+        countryRadioValue: 'areaPercent'
     };
 
 
@@ -62,7 +62,7 @@ export default class Auckland extends React.Component {
                             style={{padding: 10, paddingLeft: 30}}
                             >
                             <div>
-                                <h1>Auckland</h1>
+                                <h1>Auckland - Accommodation Type</h1>
                                 <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.accommodationRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="area"
@@ -84,8 +84,8 @@ export default class Auckland extends React.Component {
                             style={{padding: 10, paddingLeft: 30}}
                             >
                             <div>
-                                <h1>Country of Origin Of Visitors</h1>       
-                                <RadioButtonGroup name="GraphType" defaultSelected="areaStacked" onChange={this.countryRadioButtonChange} style={{marginBottom: 30}}>
+                                <h1>Auckland - Origin Of Visitors</h1>       
+                                <RadioButtonGroup name="GraphType" defaultSelected="areaPercent" onChange={this.countryRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="areaPercent"
                                         label="Percent Area Graph"
