@@ -11,7 +11,7 @@ export default class Home extends React.Component {
                 
                 <Paper
                     zDepth={1}
-                    style={{padding: 20, paddingLeft: 50, margin: 30}}
+                    style={{padding: 10, paddingLeft: 30}}
                     >
                     <div>
                         <h1>Home Page</h1>

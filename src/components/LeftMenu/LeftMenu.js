@@ -12,6 +12,7 @@ import { Link } from "react-router";
 
 import LocationPin from 'material-ui/svg-icons/communication/location-on';
 import Home from 'material-ui/svg-icons/action/home';
+import Calculator from 'material-ui/svg-icons/hardware/keyboard';
 
 
 const styles = {
@@ -46,12 +47,17 @@ class LeftMenu extends React.Component{
                 <Divider />
 
                 <List>
-                    <ListItem primaryText="National" onTouchTap={() => this.linkTo('/national')} leftIcon={<LocationPin />} />
+                    <ListItem primaryText="Spend Calculator" onTouchTap={() => this.linkTo('/spend_calculator')} leftIcon={<Calculator />} />
                 </List>
                 <Divider />
 
                 <List>
-                    <ListItem primaryText="Auckland" onTouchTap={() => this.linkTo('auckland')} leftIcon={<LocationPin />} />
+                    <ListItem primaryText="National" onTouchTap={() => this.linkTo('national')} leftIcon={<LocationPin />} />
+                </List>
+                <Divider inset={true}/>
+
+                <List>
+                    <ListItem primaryText="Auckland" onTouchTap={() => this.linkTo('auckland')} leftIcon={<LocationPin />} /> 
                     <ListItem primaryText="Waikato" onTouchTap={() => this.linkTo('waikato')} leftIcon={<LocationPin />} />
                     <ListItem primaryText="Wellington" onTouchTap={() => this.linkTo('wellington')} leftIcon={<LocationPin />} />
                     <ListItem primaryText="West Coast" onTouchTap={() => this.linkTo('west-coast')} leftIcon={<LocationPin />} />
