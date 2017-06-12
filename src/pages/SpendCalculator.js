@@ -90,7 +90,7 @@ export default class Home extends React.Component {
             return '?'
         }
         else{
-            return '$' + results[0].spend
+            return <span style={{padding: 20, border: '1px solid #00bcd4', fontFamily: 'monospace'}}>{'$' + results[0].spend}</span>
         }
     }
 

@@ -67,4 +67,12 @@
 }
 
 
+@font-face {
+  font-family: 'Roboto-mono';
+  font-weight: 500;
+  font-style: normal;
+  src: url('Roboto-mono/RobotoMono-Medium.ttf') format('truetype'),
+}
+
+
 
