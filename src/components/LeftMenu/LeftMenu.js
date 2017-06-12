@@ -54,7 +54,6 @@ class LeftMenu extends React.Component{
                 <List>
                     <ListItem primaryText="National" onTouchTap={() => this.linkTo('national')} leftIcon={<LocationPin />} />
                 </List>
-                <Divider inset={true}/>
 
                 <List>
                     <ListItem primaryText="Auckland" onTouchTap={() => this.linkTo('auckland')} leftIcon={<LocationPin />} /> 
