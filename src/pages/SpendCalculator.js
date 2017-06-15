@@ -87,10 +87,10 @@ export default class Home extends React.Component {
             return ''
         }
         else if (!this.doesSelectionMatchState()){
-            return '?'
+            return <div style={{width: '220px'}}>?</div>
         }
         else{
-            return <span style={{padding: 20, border: '1px solid #00bcd4', fontFamily: 'monospace'}}>{'$' + results[0].spend}</span>
+            return <div style={{boxSizing: 'border-box',padding: 20, border: '1px solid #00bcd4', fontFamily: 'monospace'}}>{'$' + results[0].spend}</div>
         }
     }
 
@@ -126,11 +126,12 @@ export default class Home extends React.Component {
                     </div>
 
                     <div style={{
-                                display: 'flex'                            
+                                display: 'flex',
+                                flexWrap: 'wrap',
                         }}>
 
                         <div style={{
-                                    flexBasis: '300px'
+                                    flexBasis: '350px'
                             }}>
 
                             <SelectField
@@ -197,14 +198,12 @@ export default class Home extends React.Component {
                             </SelectField>
                             <br />
 
-                            <RaisedButton label="Calculate" primary={true} style={{marginTop: 20}} onTouchTap={this.calculate}/>
+                            <RaisedButton label="Calculate" primary={true} style={{marginTop: 20, marginBottom: 20}} onTouchTap={this.calculate}/>
                             <br />
                         </div>
 
                         <div style={{
-                                        display: 'flex',
-                                        width: '100%',
-                                        justifyContent: 'center',
+                                        display: 'flex',         
                                         alignItems: 'center',              
                             }}>
                             <span style={{

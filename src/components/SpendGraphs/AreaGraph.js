@@ -34,13 +34,10 @@ class AreaGraphClass extends React.Component{
                     <Tooltip wrapperStyle={{backgroundColor: '#303030'}}/>
                     <Legend/>
                     <ReferenceLine x="2016" stroke="red" label="Future Prediction" />
-                    <Area type='monotone' dataKey='hotel' name="Hotel" stackId="1" stroke='#8884d8' fill='#8884d8' />
-                    <Area type='monotone' dataKey='familyAndFriends' name="Family and Friends" stackId="1" stroke='#82ca9d' fill='#82ca9d' />
-                    <Area type='monotone' dataKey='motel' name="Motel" stackId="1" stroke='#ffc658' fill='#ffc658' />
-                    <Area type='monotone' dataKey='camping' name="Camping" stackId="1" stroke='#7AA7D2' fill='#7AA7D2' />
-                    <Area type='monotone' dataKey='backpackers' name="Backpackers" stackId="1" stroke='#E392B4' fill='#E392B4' />
-                    <Area type='monotone' dataKey='luxury' name="Luxury Accomodation" stackId="1"  stroke='#FFBEA4' fill='#FFBEA4' />
-                    <Area type='monotone' dataKey='bAndB' name="B & B" stackId="1" stroke='#95D469' fill='#95D469' />
+                    <Area type='monotone' dataKey='australia' name="Australia" stackId="1" stroke='#8884d8' fill='#8884d8' />
+                    <Area type='monotone' dataKey='china' name="China" stackId="1" stroke='#82ca9d' fill='#82ca9d' />
+                    <Area type='monotone' dataKey='usa' name="USA" stackId="1" stroke='#ffc658' fill='#ffc658' />
+                    <Area type='monotone' dataKey='uk' name="UK" stackId="1" stroke='#7AA7D2' fill='#7AA7D2' />
                 </AreaChart>
             </ResponsiveContainer>
         )

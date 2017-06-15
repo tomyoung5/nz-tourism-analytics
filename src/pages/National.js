@@ -10,16 +10,20 @@ import AccommodationLineGraph from '../components/AccommodationGraphs/LineGraph.
 import AccommodationAreaGraph from '../components/AccommodationGraphs/AreaGraph.js';
 import CountryPercentGraph from '../components/CountryOfOriginGraphs/AreaPercentGraph.js';
 import CountryAreaGraph from '../components/CountryOfOriginGraphs/AreaGraph.js';
+import SpendAreaGraph from '../components/SpendGraphs/AreaGraph.js';
+import SpendLineGraph from '../components/SpendGraphs/LineGraph.js';
 
 import { nationalAccomodationData } from '../data/accommodation/national.js';
 import { nationalCountryData } from '../data/country/national.js';
+import { nationalSpendData } from '../data/spend/national.js';
 
 
 export default class National extends React.Component {
 
     state = {
         accommodationRadioValue: 'area',
-        countryRadioValue: 'areaPercent'
+        countryRadioValue: 'areaPercent',
+        spendRadioValue: 'area'
     };
 
 
@@ -32,6 +36,12 @@ export default class National extends React.Component {
     countryRadioButtonChange = (event, value) => {
         this.setState({
             countryRadioValue: value
+        })
+    }
+
+    spendRadioButtonChange = (event, value) => {
+        this.setState({
+            spendRadioValue: value
         })
     }
 
@@ -50,6 +60,15 @@ export default class National extends React.Component {
         }
         if(this.state.countryRadioValue == 'areaStacked'){
             return <CountryAreaGraph data={nationalCountryData}/>
+        }
+    }
+
+    renderSpendGraph = () => {
+        if(this.state.spendRadioValue == 'area'){
+            return <SpendAreaGraph data={nationalSpendData} />
+        }
+        if(this.state.spendRadioValue == 'line'){
+            return <SpendLineGraph data={nationalSpendData}/>
         }
     }
 
@@ -101,6 +120,25 @@ export default class National extends React.Component {
                     </Tab>
 
                     <Tab label="Spend">
+                        <Paper
+                            style={{padding: 10, paddingLeft: 30}}
+                            >
+                            <div>
+                                <h1>National - Spend of Visitors</h1>       
+                                <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.spendRadioButtonChange} style={{marginBottom: 30}}>
+                                    <RadioButton
+                                        value="area"
+                                        label="Area Graph"
+                                        style={{marginBottom: 10}}
+                                    />
+                                    <RadioButton
+                                        value="line"
+                                        label="Line Graph"
+                                    />
+                                </RadioButtonGroup>
+                                {this.renderSpendGraph()}                                                          
+                            </div>
+                        </Paper>
 
                     </Tab>
 
