@@ -236,7 +236,7 @@ export default class Home extends React.Component {
                                 <TableHeaderColumn>Age</TableHeaderColumn>
                                 <TableHeaderColumn>Country</TableHeaderColumn>
                                 <TableHeaderColumn>Purpose</TableHeaderColumn>
-                                <TableHeaderColumn>Average Spend</TableHeaderColumn>
+                                <TableHeaderColumn>Average Spend Per Week</TableHeaderColumn>
                             </TableRow>
                         </TableHeader>
                         <TableBody displayRowCheckbox={false}>
