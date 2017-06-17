@@ -62,6 +62,9 @@ export default class Waikato extends React.Component {
                             >
                             <div>
                                 <h1>Waikato - Accommodation Type</h1>
+                                <p>
+                                    This graph shows the relationship of total Waikato visitor numbers who stayed in a type of accommodation against other accommodation types over time.
+                                </p> 
                                 <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.accommodationRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="area"
@@ -83,7 +86,10 @@ export default class Waikato extends React.Component {
                             style={{padding: 10, paddingLeft: 30}}
                             >
                             <div>
-                                <h1>Waikato  - Origin Of Visitors</h1>       
+                                <h1>Waikato  - Origin Of Visitors</h1>
+                                <p>
+                                    This graph shows the relationship of total visitor numbers to Waikato versus their country of origin over time.
+                                </p>      
                                 <RadioButtonGroup name="GraphType" defaultSelected="areaPercent" onChange={this.countryRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="areaPercent"

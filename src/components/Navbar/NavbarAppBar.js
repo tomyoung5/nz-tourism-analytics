@@ -11,11 +11,11 @@ const NavbarAppBar = ({toggleLeftMenu}) => (
     <ResponsiveAppBar
         title={
                 <div>
-                    <span>New Zealand Tourism Analytics</span>
+                    <span>Tourism NZ Analytics</span>
                     <TimeLine className="timeline"/>
                 </div>
                 }        
-        titleStyle={{textAlign: 'center'}}
+        titleStyle={{textAlign: 'center', fontWeight: 'bold'}}
     />
 );
 

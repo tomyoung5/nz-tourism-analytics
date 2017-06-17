@@ -81,6 +81,9 @@ export default class National extends React.Component {
                         <Paper style={{padding: 10, paddingLeft: 30}}>
                             <div>
                                 <h1>National - Accommodation Type</h1>
+                                <p>
+                                    This graph shows the relationship of total national visitor numbers who stayed in a type of accommodation against other accommodation types over time.
+                                </p> 
                                 <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.accommodationRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="area"
@@ -102,7 +105,10 @@ export default class National extends React.Component {
                             style={{padding: 10, paddingLeft: 30}}
                             >
                             <div>
-                                <h1>National - Origin Of Visitors</h1>       
+                                <h1>National - Origin Of Visitors</h1>
+                                <p>
+                                    This graph shows the relationship of total visitor numbers to New Zealand versus their country of origin over time.
+                                </p>   
                                 <RadioButtonGroup name="GraphType" defaultSelected="areaPercent" onChange={this.countryRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="areaPercent"
@@ -124,7 +130,10 @@ export default class National extends React.Component {
                             style={{padding: 10, paddingLeft: 30}}
                             >
                             <div>
-                                <h1>National - Spend of Visitors</h1>       
+                                <h1>National - Spend of Visitors</h1>
+                                <p>
+                                    This graph shows the relationship of total visitor spend on their trip to New Zealand versus their country of origin over time.
+                                </p>
                                 <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.spendRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="area"

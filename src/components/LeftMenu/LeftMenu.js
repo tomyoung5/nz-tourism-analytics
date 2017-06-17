@@ -14,6 +14,8 @@ import LocationPin from 'material-ui/svg-icons/communication/location-on';
 import Home from 'material-ui/svg-icons/action/home';
 import Calculator from 'material-ui/svg-icons/hardware/keyboard';
 
+import Logo from './logo.png';
+
 
 const styles = {
   cross: {
@@ -39,7 +41,11 @@ class LeftMenu extends React.Component{
         return(
             <ResponsiveDrawer>
                 
-                <AppBar showMenuIconButton={false} />
+                <AppBar 
+                    showMenuIconButton={false} 
+                    title={<img style={{width: '100%', marginTop: 9}} src={Logo}/>}
+                    titleStyle={{textAlign: 'center'}}
+                    />
 
                 <List>
                     <ListItem primaryText="Home" onTouchTap={() => this.linkTo('/')} leftIcon={<Home />} />

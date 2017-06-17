@@ -90,7 +90,13 @@ export default class Home extends React.Component {
             return <div style={{width: '220px'}}>?</div>
         }
         else{
-            return <div style={{boxSizing: 'border-box',padding: 20, border: '1px solid #00bcd4', fontFamily: 'monospace'}}>{'$' + results[0].spend}</div>
+            return <div>
+                        <div style={{boxSizing: 'border-box',padding: 20, border: '1px solid #00bcd4', fontFamily: 'monospace'}}>
+                            {'$' + results[0].spend}
+                            <br />
+                            <div style={{display: 'flex', justifyContent: 'center', fontSize: 18}}>per week</div>                        
+                        </div>                        
+                    </div>
         }
     }
 
