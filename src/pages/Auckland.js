@@ -4,6 +4,8 @@ import React from "react";
 import Paper from 'material-ui/Paper';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import Bed from 'material-ui/svg-icons/maps/local-hotel';
+import Flight from 'material-ui/svg-icons/action/flight-land';
 
 //Custom Components
 import AccommodationLineGraph from '../components/AccommodationGraphs/LineGraph.js';
@@ -19,7 +21,7 @@ export default class Auckland extends React.Component {
 
      state = {
         accommodationRadioValue: 'area',
-        countryRadioValue: 'areaPercent'
+        countryRadioValue: 'areaStacked'
     };
 
 
@@ -57,7 +59,7 @@ export default class Auckland extends React.Component {
         return (
             <div className="page">
                 <Tabs>
-                    <Tab label="Accomodation">
+                    <Tab label="Accomodation" icon={<Bed/>}>
                         <Paper
                             style={{padding: 10, paddingLeft: 30}}
                             >
@@ -69,7 +71,7 @@ export default class Auckland extends React.Component {
                                 <RadioButtonGroup name="GraphType" defaultSelected="area" onChange={this.accommodationRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="area"
-                                        label="Area Graph"
+                                        label="Stacked Area Graph"
                                         style={{marginBottom: 10}}
                                     />
                                     <RadioButton
@@ -82,7 +84,7 @@ export default class Auckland extends React.Component {
                         </Paper>
                     </Tab>
 
-                    <Tab label="Country">
+                    <Tab label="Country" icon={<Flight/>}>
                         <Paper
                             style={{padding: 10, paddingLeft: 30}}
                             >
@@ -91,15 +93,15 @@ export default class Auckland extends React.Component {
                                 <p>
                                     This graph shows the relationship of total visitor numbers to Auckland versus their country of origin over time.
                                 </p>       
-                                <RadioButtonGroup name="GraphType" defaultSelected="areaPercent" onChange={this.countryRadioButtonChange} style={{marginBottom: 30}}>
-                                    <RadioButton
-                                        value="areaPercent"
-                                        label="Percent Area Graph"
-                                        style={{marginBottom: 10}}
-                                    />
+                                <RadioButtonGroup name="GraphType" defaultSelected="areaStacked" onChange={this.countryRadioButtonChange} style={{marginBottom: 30}}>
                                     <RadioButton
                                         value="areaStacked"
                                         label="Stacked Area Graph"
+                                        style={{marginBottom: 10}}
+                                    />
+                                    <RadioButton
+                                        value="areaPercent"
+                                        label="Percent Area Graph"
                                     />
                                 </RadioButtonGroup>
                                 {this.renderCountryGraph()}                                                          

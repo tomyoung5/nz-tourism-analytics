@@ -13,15 +13,19 @@ class AreaGraphClass extends React.Component{
             return 300
         }
         else if(screenSize.small){
-            return 400
+            return 350
         }
         else if(screenSize.medium){
-            return 500
+            return 400
         }
         else{
-            return 600
+            return 500
         }
     }
+
+    toThousands = (decimal, fixed = 0) => {
+        return `${(decimal).toString().slice(0, -3)}K`;
+    };
 
     render() {
         return (
@@ -29,7 +33,7 @@ class AreaGraphClass extends React.Component{
                 <AreaChart data={this.props.data}
                     margin={{top: 20, right: 30, left: 0, bottom: 0}}>
                     <XAxis dataKey="year"/>
-                    <YAxis width={70}/>
+                    <YAxis tickFormatter={this.toThousands}/>
                     <CartesianGrid strokeDasharray="3 3"/>
                     <Tooltip wrapperStyle={{backgroundColor: '#303030'}}/>
                     <Legend/>

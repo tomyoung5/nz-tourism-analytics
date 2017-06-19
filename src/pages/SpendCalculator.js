@@ -87,7 +87,7 @@ export default class Home extends React.Component {
             return ''
         }
         else if (!this.doesSelectionMatchState()){
-            return <div style={{width: '220px'}}>?</div>
+            return ''
         }
         else{
             return <div>
@@ -129,6 +129,12 @@ export default class Home extends React.Component {
                     >
                     <div>
                         <h1>Spend Calculator</h1>
+                        <p>
+                            Use this tool to find out how much money you will need to bring with you on your trip to New Zealand!
+                        </p>
+                        <p>
+                            The amount shown by the calculator is how much money our machine learning algorithm thinks you will spend per week matched to your visitor attributes.
+                        </p>
                     </div>
 
                     <div style={{

@@ -46,13 +46,13 @@ class AreaPercentGraphClass extends React.Component{
             return 300
         }
         else if(screenSize.small){
-            return 400
+            return 350
         }
         else if(screenSize.medium){
-            return 500
+            return 400
         }
         else{
-            return 600
+            return 500
         }
     }
 
@@ -66,7 +66,7 @@ class AreaPercentGraphClass extends React.Component{
                 <AreaChart data={this.state.newData}
                     margin={{top: 20, right: 30, left: 0, bottom: 0}}>
                     <XAxis dataKey="year"/>
-                    <YAxis width={70} tickFormatter={this.toPercent}/>
+                    <YAxis tickFormatter={this.toPercent}/>
                     <CartesianGrid strokeDasharray="3 3"/>
                     <Tooltip 
                         wrapperStyle={{backgroundColor: '#303030'}}

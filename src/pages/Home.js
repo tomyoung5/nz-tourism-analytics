@@ -25,7 +25,9 @@ export default class Home extends React.Component {
                             targeted marketing to attract more tourists. Predictive analytics is helping businesses 
                             achieve that. 
                         </p>
-                        <img style={{width: '100%'}} src={Banner}/>              
+                        <div style={{width: '100%', height: 450, position: 'relative', overflow: 'hidden'}}>
+                            <img style={{left: '50%', top: 0, marginLeft: -1091, position: 'absolute'}} src={Banner}/>              
+                        </div>
                         <p>
                             This project delivers a predictive data model using the International 
                             Visitor Survey data by performing various regression algorithms, optimizing and 
