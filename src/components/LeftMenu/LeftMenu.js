@@ -1,5 +1,5 @@
 import React from "react";
-import { browserHistory } from 'react-router'; 
+import { Link, browserHistory } from 'react-router'; 
 
 //Material UI
 import { ResponsiveDrawer } from 'material-ui-responsive-drawer';
@@ -8,7 +8,6 @@ import CloseIcon from 'material-ui/svg-icons/navigation/close';
 import AppBar from 'material-ui/AppBar';
 import Divider from 'material-ui/Divider';
 import {List, ListItem} from 'material-ui/List';
-import { Link } from "react-router";
 
 import LocationPin from 'material-ui/svg-icons/communication/location-on';
 import Home from 'material-ui/svg-icons/action/home';
@@ -31,11 +30,6 @@ class LeftMenu extends React.Component{
         super(props)
     }
 
-    linkTo = (url) => {
-        this.props.toggleLeftMenu()
-        browserHistory.push(url);        
-    };
-
     render(){
         const { visibility, toggleLeftMenu } = this.props
         return(
@@ -47,26 +41,59 @@ class LeftMenu extends React.Component{
                     titleStyle={{textAlign: 'center'}}
                     />
 
+                {/*<Link to={'/'}>Home</Link>*/}
                 <List>
-                    <ListItem primaryText="Home" onTouchTap={() => this.linkTo('/')} leftIcon={<Home />} />
+                    <Link to={'/'} style={{textDecoration: 'none'}}>
+                        <ListItem leftIcon={<Home />}>
+                            Home
+                        </ListItem>
+                    </Link>
                 </List>
                 <Divider />
 
                 <List>
-                    <ListItem primaryText="Spend Calculator" onTouchTap={() => this.linkTo('/spend_calculator')} leftIcon={<Calculator />} />
+                    <Link to={'spend_calculator'} style={{textDecoration: 'none'}}>
+                        <ListItem leftIcon={<Calculator />}>
+                            Spend Calculator
+                        </ListItem>
+                    </Link>
                 </List>
                 <Divider />
 
                 <List>
-                    <ListItem primaryText="National" onTouchTap={() => this.linkTo('national')} leftIcon={<LocationPin />} />
+                    <Link to={'national'} style={{textDecoration: 'none'}}>
+                        <ListItem leftIcon={<LocationPin />}>
+                            National
+                        </ListItem>
+                    </Link>
                 </List>
 
                 <List>
-                    <ListItem primaryText="Auckland" onTouchTap={() => this.linkTo('auckland')} leftIcon={<LocationPin />} /> 
-                    <ListItem primaryText="Waikato" onTouchTap={() => this.linkTo('waikato')} leftIcon={<LocationPin />} />
-                    <ListItem primaryText="Wellington" onTouchTap={() => this.linkTo('wellington')} leftIcon={<LocationPin />} />
-                    <ListItem primaryText="West Coast" onTouchTap={() => this.linkTo('west-coast')} leftIcon={<LocationPin />} />
-                    <ListItem primaryText="Queenstown" onTouchTap={() => this.linkTo('queenstown')} leftIcon={<LocationPin />} />
+                    <Link  to={'auckland'} style={{textDecoration: 'none'}}>
+                        <ListItem leftIcon={<LocationPin />}>
+                            Auckland
+                        </ListItem>
+                    </Link>
+                    <Link  to={'waikato'} style={{textDecoration: 'none'}}>
+                        <ListItem leftIcon={<LocationPin />}>
+                            Waikato
+                        </ListItem>
+                    </Link>
+                    <Link  to={'wellington'} style={{textDecoration: 'none'}}>
+                        <ListItem leftIcon={<LocationPin />}>
+                            Wellington
+                        </ListItem>
+                    </Link>
+                    <Link  to={'west-coast'} style={{textDecoration: 'none'}}>
+                        <ListItem leftIcon={<LocationPin />}>
+                            West Coast
+                        </ListItem>
+                    </Link>
+                    <Link  to={'queenstown'} style={{textDecoration: 'none'}}>
+                        <ListItem leftIcon={<LocationPin />}>
+                            Queenstown
+                        </ListItem>
+                    </Link>
                 </List>
             </ResponsiveDrawer>
         )

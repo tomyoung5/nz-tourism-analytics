@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, browserHistory } from "react-router";
 import { Provider } from "react-redux";
 
 import routes from "./routes.js";
@@ -25,17 +24,7 @@ const muiTheme = getMuiTheme(darkBaseTheme)
 ReactDOM.render(
     <Provider store={store}>
         <MuiThemeProvider muiTheme={muiTheme}>
-            <Router history={browserHistory} routes={routes} />
+            {routes}
         </MuiThemeProvider>
     </Provider>
 , app)
-
-/*
-const muiTheme = getMuiTheme({
-	palette: {
-		primary1Color: '#414bb2', //DarkBlue
-		primary2Color: '#4f1fa2', //DarkPurple
-	    accent1Color:  '#920faa', //lightPurple
-	},
-});
-*/

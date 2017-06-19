@@ -9,12 +9,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: {
         main: "./src/index.js",
-        axios: "axios"
+        //axios: "axios"
     },
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "dist"),      
         filename: dev ? "[name].js" : "[chunkhash].[name].js",
-        publicPath: publicPath
+        publicPath: "dist/"
     },
     module: {
         rules: [
